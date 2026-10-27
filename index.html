@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Водная сортировка</title>
+    <script src="https://telegram.org/js/telegram-web-app.js?64"></script>
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #1d6fe0;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #game { position: fixed; inset: 0; }
+      canvas { display: block; }
+      /* Индикатор загрузки до первого кадра игры (убирает BootScene) */
+      #loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(#6fd3ff, #1d6fe0);
+        z-index: 1;
+      }
+      #loader div {
+        width: 48px;
+        height: 48px;
+        border: 6px solid rgba(255, 255, 255, 0.35);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+    <script type="module" crossorigin src="./assets/index-BjpvF3w4.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DViyeApa.css">
+  </head>
+  <body oncontextmenu="return false">
+    <div id="loader"><div></div></div>
+    <div id="game"></div>
+  </body>
+</html>
